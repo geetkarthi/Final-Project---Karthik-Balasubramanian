@@ -13,7 +13,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.tree import export_graphviz 
 from sklearn import preprocessing
-df = pd.read_csv(r"C:\Users\karth\Downloads\understat_per_game.csv")
+df = pd.read_csv("understat_per_game.csv")
 st.title("Welcome to Football Statistics")
 #the options available
 array = ['Choose Value', 'League Table', 'Team Performance per Season', 'ppda stats', 'League position through a season', 'Regression for Team', 'Multiple Visualizations']
