@@ -13,7 +13,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn import datasets 
 from sklearn import preprocessing
 from sklearn import tree
-df = pd.read_csv(r"C:\Users\karth\Downloads\understat_per_game.csv")
+df = pd.read_csv("understat_per_game.csv")
 st.title("Welcome to Football Statistics")
 #the options available
 array = ['Column Names explanations', 'League Table', 'Team Performance per Season', 'ppda stats', 'League position through a season', 'Regression for Team', 'Multiple Visualizations']
