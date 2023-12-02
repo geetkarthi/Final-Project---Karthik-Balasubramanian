@@ -13,6 +13,8 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn import datasets 
 from sklearn import preprocessing
 from sklearn import tree
+from dtreeviz.trees import dtreeviz
+import graphviz as graphviz
 df = pd.read_csv("understat_per_game.csv")
 st.title("Welcome to Football Statistics")
 #the options available
@@ -297,6 +299,8 @@ elif selectbox_a == 'Regression for Team':
     st.write(X_test.shape)
     y_pred = regressor.predict(X_test)
     st.write(y_test, y_pred)
+    viz= dtreeviz(regressor, X, y, target_name="Classes", feature_names=c, class_names=d)
+    st.image(viz._repr_svg_(), use_column_width=True)
     rmse = format(np.sqrt(mean_squared_error(y_test, y_pred)), '.3f')
     st.write("\nRMSE: ", rmse)
     a = [1, 0]
