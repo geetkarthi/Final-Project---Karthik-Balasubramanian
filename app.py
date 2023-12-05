@@ -203,6 +203,7 @@ elif selectbox_a == 'League position through a season':
         )
         l = new_one.iloc[[selectbox3 - 1]]
         l = l.T
+        fig = plt.figure(figsize = (50, 8))
         fig = l.plot()
         st.pyplot(fig.figure)
         
@@ -244,6 +245,7 @@ elif selectbox_a == 'League position through a season':
         )
         l = new_one.iloc[[selectbox3 - 1]]
         l = l.T
+        fig = plt.figure(figsize = (50, 8))
         fig = l.plot()
         st.pyplot(fig.figure)
 
@@ -285,6 +287,7 @@ elif selectbox_a == 'League position through a season':
         )
         l = new_one.iloc[[selectbox3 - 1]]
         l = l.T
+        fig = plt.figure(figsize = (50, 8))
         fig = l.plot()
         st.pyplot(fig.figure) 
     
