@@ -55,7 +55,7 @@ elif selectbox_a == 'League Table':
     df_actual_table.reset_index(inplace=True)
     x1 = df_actual_table['xG'].mean()
     y1 = df_actual_table['xGA'].mean()
-    z1 = df_actual_mean['scored'].mean()
+    z1 = df_actual_table['scored'].mean()
     st.write(df_actual_table)
     st.caption("The league table for the season")
     st.title("Total points table for" + ' ' + str(selectbox2) + ' ' + "for the season" + ' ' + str(selectbox1))
