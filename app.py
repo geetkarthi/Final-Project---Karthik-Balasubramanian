@@ -65,7 +65,7 @@ elif selectbox_a == 'League Table':
     st.plotly_chart(b)
     st.title("Goals scored and against")
     st.plotly_chart(c)
-    d = go.scatter(x = df_actual_table['scored'], y = df_actual_table['xG']. text = df_actual_table['team'])
+    d = go.scatter(x = df_actual_table['scored'], y = df_actual_table['xG'], text = df_actual_table['team'])
     st.title('xG performance of all the teams')
     st.plotly_chart(d)
 
