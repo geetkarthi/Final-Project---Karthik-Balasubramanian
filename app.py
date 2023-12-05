@@ -64,6 +64,9 @@ elif selectbox_a == 'League Table':
     st.plotly_chart(b)
     st.title("Goals scored and against")
     st.plotly_chart(c)
+    d = px.scatter(df_actual_table, x = 'scored', y = 'xG')
+    st.title('xG performance of all the teams')
+    st.plotly_chart(d)
 
 elif selectbox_a == 'Team Performance per Season':
     selectbox1 = st.selectbox(
