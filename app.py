@@ -13,6 +13,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn import datasets 
 from sklearn import preprocessing
 from sklearn import tree
+import plotly.graph_objects as go
 df = pd.read_csv("understat_per_game.csv")
 st.title("Welcome to Football Statistics")
 #the options available
@@ -64,7 +65,7 @@ elif selectbox_a == 'League Table':
     st.plotly_chart(b)
     st.title("Goals scored and against")
     st.plotly_chart(c)
-    d = px.scatter(df_actual_table, x = 'scored', y = 'xG')
+    d = go.scatter(x = df_actual_table['scored'], y = df_actual_table['xG']. text = df_actual_table['team'])
     st.title('xG performance of all the teams')
     st.plotly_chart(d)
 
