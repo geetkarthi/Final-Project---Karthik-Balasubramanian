@@ -67,6 +67,7 @@ elif selectbox_a == 'League Table':
     st.plotly_chart(c)
     d = go.Figure(data=go.Scatter(x=df_actual_table['scored'],
                                 y=df_actual_table['xG'],
+                                mode = 'markers',
                                 text=df_actual_table['team']))
     st.title('xG performance of all the teams')
     st.plotly_chart(d)
