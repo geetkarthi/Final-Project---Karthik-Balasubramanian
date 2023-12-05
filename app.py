@@ -49,7 +49,7 @@ elif selectbox_a == 'League Table':
     
     df_new = df_new[df_new['league'] == selectbox2]
     df_actual_table = df_new.groupby(['year', 'league', 'team'])[['wins', 'draws', 'loses', 'scored', 'xG', 'missed', 'xGA', 'xpts', 'pts']].sum()
-    df_actual_table.sort_values(['pts', 'scored'], ascending = False, inplace = True)
+    df_actual_table.sort_values(['pts', int('scored') - int('missed')], ascending = False, inplace = True)
     df_actual_table.reset_index(inplace=True)
     st.write(df_actual_table)
     st.caption("The league table for the season")
