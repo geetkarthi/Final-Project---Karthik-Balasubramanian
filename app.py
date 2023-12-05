@@ -49,13 +49,10 @@ elif selectbox_a == 'League Table':
     
     df_new = df_new[df_new['league'] == selectbox2]
     df_actual_table = df_new.groupby(['year', 'league', 'team'])[['wins', 'draws', 'loses', 'scored', 'xG', 'missed', 'xGA', 'xpts', 'pts']].sum()
-    df_actual_table.sort_values('pts', ascending = False, inplace = True)
+    df_actual_table.sort_values(['pts', 'scored' - 'missed'], ascending = False, inplace = True)
     df_actual_table.reset_index(inplace=True)
     st.write(df_actual_table)
     st.caption("The league table for the season")
-    df_x = df_actual_table.sort_values('xpts', ascending = False, inplace = True)
-    st.write(df_x)
-    st.caption("The xG table for the season")
     st.title("Total points table for" + ' ' + str(selectbox2) + ' ' + "for the season" + ' ' + str(selectbox1))
     fig = plt.figure(figsize=(50, 4))
     a = sns.barplot(df_actual_table, x = 'team', y = 'pts')
