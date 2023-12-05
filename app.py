@@ -217,7 +217,7 @@ elif selectbox_a == 'League position through a season':
         l = new_one.iloc[[selectbox3 - 1]]
         l = l.T
         a = l.plot()
-        st.pyplot(a.figure(figsize = (50, 8)))
+        st.pyplot(a.figure)
         
     elif (selectbox2 == 'EPL') or (selectbox2 == 'Ligue 1') or (selectbox2 == 'Serie A') or (selectbox2 == 'La Liga'):
         a = [[(0, 0, 0, 0) for i in range(38)] for i in range(20)]
