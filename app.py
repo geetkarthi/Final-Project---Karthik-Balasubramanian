@@ -74,6 +74,9 @@ elif selectbox_a == 'League Table':
                                 text=df_actual_table['team']))
     d.add_vline(x=z1, line_width=3, line_dash="dash", line_color="green")
     d.add_hline(y=x1, line_width=3, line_dash="dash", line_color="green")
+    d.update_layout(
+      xaxis_title="Goals scored", yaxis_title="xG accumulated"
+    )
     st.title('xG performance of all the teams')
     st.plotly_chart(d)
     e = go.Figure(data=go.Scatter(x=df_actual_table['xG'],
@@ -82,6 +85,9 @@ elif selectbox_a == 'League Table':
                                 text=df_actual_table['team']))
     e.add_vline(x=x1, line_width=3, line_dash="dash", line_color="red")
     e.add_hline(y=y1, line_width=3, line_dash="dash", line_color="red")
+    e.update_layout(
+      xaxis_title="xG accumulated", yaxis_title="xGA accumulated"
+    )
     st.title('xG versus performance of all the teams')
     st.plotly_chart(e)
 
